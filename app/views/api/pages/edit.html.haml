@@ -1,0 +1,7 @@
+= simple_form_for [:api, @page], :format => :json do |f|
+  = f.input :title
+  = f.input :content
+  = f.input :published_on
+  = f.button :submit
+
+= link_to "Delete", api_page_path(@page), :confirm => "Are you sure?", :method => :delete
